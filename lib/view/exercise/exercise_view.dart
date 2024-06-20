@@ -17,25 +17,25 @@ class _ExerciseViewState extends State<ExerciseView> {
 
   List workArr = [
     {
-      "name": "Climber",
+      "name": "Box",
       "image": "assets/img/1.png",
       "title": "workout",
       "subtitle": "Personalized workouts will help\nyou gain strength"
     },
     {
-      "name": "Climber",
+      "name": "Box",
       "image": "assets/img/2.png",
       "title": "workout",
       "subtitle": "Personalized workouts will help\nyou gain strength"
     },
     {
-      "name": "Climber",
+      "name": "Box",
       "image": "assets/img/5.png",
       "title": "workout",
       "subtitle": "Personalized workouts will help\nyou gain strength"
     },
     {
-      "name": "Climber",
+      "name": "Box",
       "image": "assets/img/3.png",
       "title": "workout",
       "subtitle": "Personalized workouts will help\nyou gain strength"
@@ -78,7 +78,7 @@ class _ExerciseViewState extends State<ExerciseView> {
               children: [
                 Expanded(
                   child: TabButton(
-                    title: "Full Body",
+                    title: "All",
                     isActive: isActiveTab == 0,
                     onPressed: () {
                       setState(() {
@@ -89,7 +89,7 @@ class _ExerciseViewState extends State<ExerciseView> {
                 ),
                 Expanded(
                   child: TabButton(
-                    title: "Foot",
+                    title: "Football",
                     isActive: isActiveTab == 1,
                     onPressed: () {
                       setState(() {
@@ -100,7 +100,7 @@ class _ExerciseViewState extends State<ExerciseView> {
                 ),
                 Expanded(
                   child: TabButton(
-                    title: "Arm",
+                    title: "Boxing",
                     isActive: isActiveTab == 2,
                     onPressed: () {
                       setState(() {
@@ -111,7 +111,18 @@ class _ExerciseViewState extends State<ExerciseView> {
                 ),
                 Expanded(
                   child: TabButton(
-                    title: "Body",
+                    title: "Fitness",
+                    isActive: isActiveTab == 3,
+                    onPressed: () {
+                      setState(() {
+                        isActiveTab = 3;
+                      });
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: TabButton(
+                    title: "Physiotherapy",
                     isActive: isActiveTab == 3,
                     onPressed: () {
                       setState(() {

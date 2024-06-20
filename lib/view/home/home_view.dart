@@ -17,28 +17,28 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   List dataArr = [
     {
-      "name": "Running",
+      "name": "User1",
       "image": "assets/img/2.png",
     },
     {
-      "name": "Push-Up",
+      "name": "User2",
       "image": "assets/img/3.png",
     },
     {
-      "name": "Leg Extension",
+      "name": "User3",
       "image": "assets/img/5.png",
     }
   ];
 
   List trainingDayArr = [
     {
-      "name": "Training Day 1",
+      "name": "Training User 1",
     },
     {
-      "name": "Training Day 2",
+      "name": "Training User 2",
     },
     {
-      "name": "Training Day 3",
+      "name": "Training User 3",
     }
   ];
 

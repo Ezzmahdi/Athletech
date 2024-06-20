@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:athletech/view/home/home_view.dart';
 import 'package:athletech/view/menu/yoga_view.dart';
 import 'package:athletech/view/settings/setting_view.dart';
+import 'package:athletech/view/workout_tracker/workout_tracker_view.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/menu_cell.dart';
@@ -14,7 +15,7 @@ import '../meal_plan/meal_plan_view_2.dart';
 import '../running/running_view.dart';
 import '../schedule/schedule_view.dart';
 import '../tips/tips_view.dart';
-import '../weight/weight_view.dart';
+import '../photo_progress/photo_progress_view.dart';
 
 class MenuView extends StatefulWidget {
   const MenuView({super.key});
@@ -26,47 +27,42 @@ class MenuView extends StatefulWidget {
 class _MenuViewState extends State<MenuView> {
   List planArr = [
     {
-      "name": "Running",
+      "name": "Progress",
       "icon": "assets/img/menu_running.png",
       "right_icon": "",
     },
     {
-      "name": "Yoga",
+      "name": "Analytics",
       "icon": "assets/img/yoga.png",
       "right_icon": "assets/img/information.png",
     },
     {
-      "name": "Workout",
+      "name": "Nutrition",
       "icon": "assets/img/workout.png",
       "right_icon": "",
     },
     {
-      "name": "Walking",
+      "name": "Schedule",
       "icon": "assets/img/walking.png",
       "right_icon": "",
     },
     {
-      "name": "Fitness",
+      "name": "Excercises",
       "icon": "assets/img/fitness.png",
       "right_icon": "assets/img/information.png",
     },
     {
-      "name": "Strength",
+      "name": "Settings",
       "icon": "assets/img/strength.png",
       "right_icon": "",
     }
   ];
 
   List menuArr = [
-    {"name": "Home", "image": "assets/img/menu_home.png", "tag": "1"},
-    {"name": "Weight", "image": "assets/img/menu_weight.png", "tag": "2"},
+    {"name": "Users", "image": "assets/img/menu_home.png", "tag": "1"},
+    {"name": "Progress", "image": "assets/img/menu_weight.png", "tag": "2"},
     {
-      "name": "Traning plan",
-      "image": "assets/img/menu_traning_plan.png",
-      "tag": "3"
-    },
-    {
-      "name": "Training Status",
+      "name": "Analytics",
       "image": "assets/img/menu_traning_status.png",
       "tag": "4"
     },
@@ -321,10 +317,14 @@ class _MenuViewState extends State<MenuView> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const WeightView()));
+                            builder: (context) => const PhotoProgressView()));
                     break;
-                  case "3":
-                    Scaffold.of(context).openDrawer();
+
+                  case "4":
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const WorkoutTrackerView()));
                     break;
                   case "5":
                     Navigator.push(
@@ -360,7 +360,7 @@ class _MenuViewState extends State<MenuView> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SettingsView()));
+                            builder: (context) => const ProfileView()));
                     break;
                   default:
                 }
