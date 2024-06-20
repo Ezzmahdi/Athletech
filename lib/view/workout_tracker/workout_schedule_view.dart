@@ -150,7 +150,6 @@ class _WorkoutScheduleViewState extends State<WorkoutScheduleView> {
                 child: ListView.separated(
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      var timelineDataWidth = (media.width * 1.5) - (80 + 40);
                       var availWidth = (media.width * 1.2) - (80 + 40);
                       var slotArr = selectDayEventArr.where((wObj) {
                         return (wObj["date"] as DateTime).hour == index;

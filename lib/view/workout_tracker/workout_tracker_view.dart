@@ -1,5 +1,4 @@
 import '../../common/colo_extension.dart';
-import '../menu/menu_view.dart';
 import '../workout_tracker/workour_detail_view.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
